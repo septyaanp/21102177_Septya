@@ -113,13 +113,31 @@ Widget build (BuildContext context){
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          te
+                          Text(
+                            'Listening\n        80',
+                            style: TextStyle(
+                              color: Colors.white, 
+                              fontSize: 16),
+                              ),
+                              Text(
+                                'Structure\n        80',
+                                style: TextStyle(
+                                  color: Colors.white, 
+                                  fontSize: 16),
+                                  ),
+                                  Text(
+                                    'Reading\n        90',
+                                    style: TextStyle(
+                                      color: Colors.white, 
+                                      fontSize: 16),
+                                      ),
                         ],
                       ),
-                    )
+                    ),
+                    SizedBox(height: 20),
                 ],
               ),
-            )
+            ),
           ],
         ),)),
   )
