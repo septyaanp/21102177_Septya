@@ -31,24 +31,23 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   final data = const [
-  {"tgl": "02/03/2022", "nilai": "150"},
-  {"tgl": "01/02/2022", "nilai": "180"},
-  {"tgl": "12/01/2022", "nilai": "170"},
-  {"tgl": "11/12/2021", "nilai": "110"},
-  {"tgl": "10/11/2021", "nilai": "190"},
-  {"tgl": "09/10/2021", "nilai": "190"},
-  {"tgl": "08/09/2021", "nilai": "160"},
-  {"tgl": "07/08/2021", "nilai": "155"},
-  {"tgl": "06/07/2021", "nilai": "145"},
-  {"tgl": "05/06/2021", "nilai": "140"},
-];
+    {"tgl": "02/03/2022", "nilai": "150"},
+    {"tgl": "01/02/2022", "nilai": "180"},
+    {"tgl": "12/01/2022", "nilai": "170"},
+    {"tgl": "11/12/2021", "nilai": "110"},
+    {"tgl": "10/11/2021", "nilai": "190"},
+    {"tgl": "09/10/2021", "nilai": "190"},
+    {"tgl": "08/09/2021", "nilai": "160"},
+    {"tgl": "07/08/2021", "nilai": "155"},
+    {"tgl": "06/07/2021", "nilai": "145"},
+    {"tgl": "05/06/2021", "nilai": "140"},
+  ];
 
-@override
-Widget build (BuildContext context){
-  return Scaffold(
-    body: SafeArea(
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
         child: Column(
@@ -61,19 +60,19 @@ Widget build (BuildContext context){
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const[
-                      Text("Welcome,", style: TextStyle(
-                        color: Color(0xFF7367F0),
-                        fontSize: 28,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 0.25)
-                      ),
+                    children: const [
+                      Text("Welcome,",
+                          style: TextStyle(
+                              color: Color(0xFF7367F0),
+                              fontSize: 28,
+                              fontWeight: FontWeight.w700,
+                              letterSpacing: 0.25)),
                       Text(
                         "21102177 - Septya Andini Putri",
                         style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          color: Color(0xFF4b4b4b4b)),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: Color(0xFF4b4b4b4b)),
                       ),
                     ],
                   ),
@@ -88,8 +87,8 @@ Widget build (BuildContext context){
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 35),
               decoration: BoxDecoration(
-                gradient:
-                const LinearGradient(colors: [Color(0xff4839eb), Color(0xff7367f0)]),
+                gradient: const LinearGradient(
+                    colors: [Color(0xff4839eb), Color(0xff7367f0)]),
                 borderRadius: BorderRadius.circular(8.0),
               ),
               child: Column(
@@ -101,45 +100,72 @@ Widget build (BuildContext context){
                     style: TextStyle(color: Colors.white, fontSize: 14),
                   ),
                   SizedBox(height: 8),
-                  Text("LULUS", style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 28,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 0.25)
+                  Text("LULUS",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 28,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 0.25)),
+                  SizedBox(height: 20),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Listening\n        80',
+                          style: TextStyle(color: Colors.white, fontSize: 16),
+                        ),
+                        Text(
+                          'Structure\n        80',
+                          style: TextStyle(color: Colors.white, fontSize: 16),
+                        ),
+                        Text(
+                          'Reading\n        90',
+                          style: TextStyle(color: Colors.white, fontSize: 16),
+                        ),
+                      ],
                     ),
-                    SizedBox(height: 20),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Listening\n        80',
-                            style: TextStyle(
-                              color: Colors.white, 
-                              fontSize: 16),
-                              ),
-                              Text(
-                                'Structure\n        80',
-                                style: TextStyle(
-                                  color: Colors.white, 
-                                  fontSize: 16),
-                                  ),
-                                  Text(
-                                    'Reading\n        90',
-                                    style: TextStyle(
-                                      color: Colors.white, 
-                                      fontSize: 16),
-                                      ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 20),
+                  ),
+                  SizedBox(height: 20),
                 ],
               ),
             ),
+            Container(
+                child: Text('Riwayat Tes',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 28,
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: 0.25))),
+            Container(
+                height: 300,
+                child: ListView.builder(
+                    itemCount: data.length,
+                    itemBuilder: (context, index) {
+                      return Column(children: [
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                'Tanggal tes:\nNilai:',
+                                style:
+                                    TextStyle(color: Colors.blue, fontSize: 20),
+                              ),
+                              Text(
+                                data[index]["tgl"]! +
+                                    '\n' +
+                                    data[index]["nilai"]!,
+                                style:
+                                    TextStyle(color: Colors.blue, fontSize: 20),
+                              ),
+                            ]),
+                        SizedBox(height: 10)
+                      ]);
+                    })),
           ],
-        ),)),
-  )
-}
+        ),
+      ),
+    ));
+  }
 }
