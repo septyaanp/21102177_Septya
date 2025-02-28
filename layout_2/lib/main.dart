@@ -138,8 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontSize: 28,
                         fontWeight: FontWeight.w700,
                         letterSpacing: 0.25))),
-            Container(
-                height: 300,
+            Expanded(
                 child: ListView.builder(
                     itemCount: data.length,
                     itemBuilder: (context, index) {
