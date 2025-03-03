@@ -9,9 +9,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> entries = <String>['A', 'B', 'C'];
-    final List<int> colorCodes = <int>[600, 500, 100];
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
