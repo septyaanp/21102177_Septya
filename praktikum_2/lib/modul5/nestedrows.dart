@@ -125,8 +125,6 @@ class MyApp extends StatelessWidget {
     );
     // #enddocregion left-column
 
-    final mainImage = Image.asset('image/pic1.png', fit: BoxFit.cover);
-
     return Scaffold(
       appBar: AppBar(title: Text(title)),
       // #docregion body
@@ -137,7 +135,7 @@ class MyApp extends StatelessWidget {
           child: Card(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [SizedBox(width: 440, child: leftColumn), mainImage],
+              children: [Expanded(child: leftColumn)],
             ),
           ),
         ),
