@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+	<html>
+	    <head>
+			<title>Form Data Mahasiswa</title>
+	    </head>
+	    <body>
+			<h1><b>Data Mahasiswa</b></h1>
+            <form>
+                <table>
+                    <tr>
+                        <td>NIM :</td>
+                        <td><input type="text" name="nim"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Nama :</td>
+                        <td><input type="text" name="nama"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Tgl Lahir (dd-mm-yyyy) :</td>
+                        <td><input type="text" name="tanggal_lahir" placeholder="dd/mm/yyyy"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Jenis Kelamin :</td>
+                        <td>
+                            <input type="radio" id="laki" name="jenis_kelamin" value="Laki-Laki">
+                            <label for="laki">Laki-Laki</label>
+                            
+                            <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">
+                            <label for="perempuan">Perempuan</label>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Alamat di Bandung :</td>
+                        <td><textarea name="alamat_bandung" rows="4" cols="30"></textarea></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Tinggal di :</td>
+                        <td>
+                            <select name="tinggal_di">
+                                <option value="" disabled selected>--pilih--</option>
+                                <option value="kos">Kos</option>
+                                <option value="kontrakan">Kos/kontrakan</option>
+                                <option value="rumahsaudara">Rumah saudara</option>
+                                <option value="rumahoranglain">Rumah orang lain</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                
+                <p>Pilih 2 hobi yang paling disukai :</p>
+                <table>
+                    <tr>
+                        <td><input type="checkbox" id="science" name="hobi" value="Science"></td>
+                        <td><label for="science">Science</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="technology" name="hobi" value="Technology"></td>
+                        <td><label for="technology">Technology</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="art" name="hobi" value="Art"></td>
+                        <td><label for="art">Art</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="sport" name="hobi" value="Sport"></td>
+                        <td><label for="sport">Sport</label></td>
+                    </tr>
+                </table>
+                
+                <br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+	    </body>
+	</html>
