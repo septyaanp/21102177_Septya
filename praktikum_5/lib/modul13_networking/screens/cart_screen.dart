@@ -61,7 +61,6 @@ class CartScreen extends StatelessWidget {
     );
   }
 
-  // TAMBAHKAN METHOD DIALOG KONFIRMASI
   void _showDeleteItemConfirmationDialog(BuildContext context, Item item) {
     showDialog(
       context: context,
@@ -89,7 +88,6 @@ class CartScreen extends StatelessWidget {
     );
   }
 
-  // TAMBAHKAN METHOD DIALOG KONFIRMASI
   void _showDeleteAllConfirmationDialog(BuildContext context) {
     showDialog(
       context: context,
