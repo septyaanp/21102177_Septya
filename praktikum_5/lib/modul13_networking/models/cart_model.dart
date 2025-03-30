@@ -31,13 +31,11 @@ class CartModel extends ChangeNotifier {
     }
   }
 
-  // TAMBAHKAN METHOD BARU INI
   void removeItem(Item item) {
     _items.removeWhere((element) => element.id == item.id);
     notifyListeners();
   }
 
-  // TAMBAHKAN METHOD BARU INI
   void clearAll() {
     _items.clear();
     notifyListeners();
