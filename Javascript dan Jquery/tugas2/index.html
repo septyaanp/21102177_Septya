@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3 - Advanced Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 sidebar text-center">
+                <img src="images/logo.png" alt="Logo" class="img-fluid my-3" style="max-width: 80%;">
+                <hr>
+                <h5>Navigasi</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="#" class="nav-link">Beranda</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Tentang Beasiswa</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Cara Daftar</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Kontak</a></li>
+                </ul>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="col-md-10">
+                <!-- Header -->
+                <div class="banner">
+                    <img src="images/banner2.jpg" alt="Program Beasiswa" class="img-fluid" >
+                </div>
+                
+                <!-- Content Section -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="content-box">
+                            <h3>Tentang Beasiswa</h3>
+                            <p>Program beasiswa ini ditujukan bagi mahasiswa berprestasi yang membutuhkan dukungan finansial dalam melanjutkan pendidikan mereka. Beasiswa mencakup biaya kuliah, tunjangan hidup, dan bantuan akademik lainnya.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-8">
+                        <div class="content-box">
+                            <h3>Syarat dan Ketentuan</h3>
+                            <ul>
+                                <li>Mahasiswa aktif di perguruan tinggi terakreditasi</li>
+                                <li>Memiliki IPK minimal 3.5</li>
+                                <li>Mengisi formulir pendaftaran secara lengkap</li>
+                                <li>Menulis esai motivasi</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content-box">
+                            <img src="images/banner.png" alt="Pengumuman Beasiswa" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <div class="content-box">
+                            <h3>Cara Mendaftar</h3>
+                            <p>Calon penerima beasiswa dapat mendaftar melalui website resmi dengan mengunggah dokumen yang dibutuhkan. Pendaftaran dibuka setiap tahun pada bulan Januari.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div class="footer">&copy; 21102177 - Septya Andini Putri</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="fixed-bottom text-end mb-3 me-3">
+        <button class="btn btn-primary me-2" onclick="ubahAlignment()">Ubah Alignment Teks</button>
+        <button class="btn btn-secondary" onclick="ubahWarnaBox()">Ubah Warna Box</button>
+      </div>
+
+      <script>
+    
+        function ubahAlignment() {
+          const contentBoxes = document.querySelectorAll('.content-box');
+          let currentAlign = contentBoxes[0].style.textAlign || 'left';
+          
+          contentBoxes.forEach(box => {
+            if (currentAlign === 'left') {
+              box.style.textAlign = 'center';
+            } else if (currentAlign === 'center') {
+              box.style.textAlign = 'right';
+            } else {
+              box.style.textAlign = 'left';
+            }
+          });
+        }
+  
+        function ubahWarnaBox() {
+          const contentBoxes = document.querySelectorAll('.content-box');
+          const originalColor = '#f1f5f9';
+          const newColor = '#ff8b8b';
+          
+          contentBoxes.forEach(box => {
+            if (box.style.backgroundColor === newColor || 
+                box.style.backgroundColor === 'rgb(255, 139, 139)') {
+              box.style.backgroundColor = originalColor;
+            } else {
+              box.style.backgroundColor = newColor;
+            }
+          });
+        }
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

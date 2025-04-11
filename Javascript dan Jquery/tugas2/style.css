@@ -1,0 +1,32 @@
+.sidebar {
+    background-color: #f8f9fa;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.banner {
+    flex: 1;
+    height: 100px;
+    background-color: #fffefe;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-box {
+    margin-top: 10px; 
+    padding: 20px;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+}
+
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
