@@ -72,6 +72,43 @@
         </div>
     </div>
     
+    <div class="fixed-bottom text-end mb-3 me-3">
+        <button class="btn btn-primary me-2" onclick="ubahAlignment()">Ubah Alignment Teks</button>
+        <button class="btn btn-secondary" onclick="ubahWarnaBox()">Ubah Warna Box</button>
+      </div>
+
+      <script>
+    
+        function ubahAlignment() {
+          const contentBoxes = document.querySelectorAll('.content-box');
+          let currentAlign = contentBoxes[0].style.textAlign || 'left';
+          
+          contentBoxes.forEach(box => {
+            if (currentAlign === 'left') {
+              box.style.textAlign = 'center';
+            } else if (currentAlign === 'center') {
+              box.style.textAlign = 'right';
+            } else {
+              box.style.textAlign = 'left';
+            }
+          });
+        }
+  
+        function ubahWarnaBox() {
+          const contentBoxes = document.querySelectorAll('.content-box');
+          const originalColor = '#f1f5f9';
+          const newColor = '#d4e6f1';
+          
+          contentBoxes.forEach(box => {
+            if (box.style.backgroundColor === newColor || 
+                box.style.backgroundColor === 'rgb(212, 230, 241)') {
+              box.style.backgroundColor = originalColor;
+            } else {
+              box.style.backgroundColor = newColor;
+            }
+          });
+        }
+      </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

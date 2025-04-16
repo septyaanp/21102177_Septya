@@ -1,3 +1,6 @@
+//Nama : Septya Andini Putri
+//NIM  : 21102177
+
 function hitungGanjil(min, max) {
     let bilanganGanjil = [];
     let total = 0;
