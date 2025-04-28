@@ -1,0 +1,15 @@
+function sapa(nama) {
+  return "Halo, " + nama;
+}
+ 
+console.log(sapa("Febrilia"));
+
+const mahasiswa = {
+    nama: "Febrilia",
+    umur: 21,
+    sapa: function() {
+      return "Halo, saya " + this.nama;
+    }
+  };
+   
+  console.log(mahasiswa.sapa());

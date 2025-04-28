@@ -1,0 +1,4 @@
+$(document).ready(function() {
+  $("#judul").text("Belajar jQuery");
+  $(".paragraf").css("color", "blue");
+});

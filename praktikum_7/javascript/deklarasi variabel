@@ -1,0 +1,3 @@
+var nama = "Febrilia"; // Global scope
+let umur = 21;          // Block scope
+const kota = "Purwokerto"; // Tidak dapat diubah

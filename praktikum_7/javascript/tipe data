@@ -1,0 +1,7 @@
+//String: “Hello”
+//Number: 42
+//Boolean: true / false
+//Array: [1, 2, 3]
+//Object: { nama: "Febrilia", umur: 21 }
+//Undefined: variabel yang belum memiliki nilai
+//Null: nilai kosong atau tidak ada

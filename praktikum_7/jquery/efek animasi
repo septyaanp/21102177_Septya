@@ -1,0 +1,2 @@
+$("#kotak").fadeOut(); // Menghilangkan elemen dengan efek fade out
+$("#kotak").fadeIn();  // Menampilkan elemen dengan efek fade in

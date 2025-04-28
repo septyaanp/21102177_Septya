@@ -1,0 +1,6 @@
+<div class="card" style="width: 18rem;"> <img src="image.jpg" class="card-img-top" alt="Gambar">
+                <div class="card-body">
+                    <h5 class="card-title">Judul Kartu</h5>
+                    <p class="card-text">Deskripsi kartu.</p> <a href="#" class="btn btn-primary">Tombol</a>
+                </div>
+            </div>
